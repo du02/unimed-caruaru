@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Ordenação Simples</title>
+  </head>
+  <body>
+    <div class="console container bg-dark p-5 mt-2 text-monospace" id="console">
+        <div class="comment text-white-50 text-justify" id="comment">
+            2 - Crie uma função que ordene uma lista de números inteiros em ordem crescente. Utilize qualquer algoritmo de ordenação de sua escolha.
+        </div>
+        <br>
+        <div class="message text-warning" id="message">
+            
+        </div>
+    </div>
+    <script>
+
+        // resolução 
+        function orderList()
+        {
+            let list = [3,1,8,4,10,9,2,5,6,7];
+
+            list.sort(function compareNumbers(x, y) {
+              return x - y;
+            });
+
+            return list;
+        }
+
+
+        // selecionando div e inserindo resultado dentro da mesma.
+        let message = document.querySelector("#message");
+        message.innerHTML = "[" + orderList() + "]" ;
+        
+    </script>
+  </body>
+</html>
