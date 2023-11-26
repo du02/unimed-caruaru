@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Verificação de Palíndromos</title>
+  </head>
+  <body class="p-2">
+    <div class="container mt-2 p-0 d-flex">
+      <input id="inputValue" class="form-control form-control-lg text-monospace mr-1" type="text" placeholder="Digite uma palavra." value="Reviver">
+      <button id="buttonValue" type="submit" class="btn btn-warning btn-lg mb-2 text-white">Consultar</button>
+    </div>
+    <div class="console container bg-dark p-5 mt-2 text-monospace" id="console">
+        <div class="comment text-white-50 text-justify" id="comment">
+            4 - Escreva uma função que determine se uma palavra é um palíndromo. A função deve retornar True se for um palíndromo e False caso contrário.
+        </div>
+        <br>
+        <div class="message text-warning" id="message">
+            
+        </div>
+    </div>
+    <script>
+
+        // resolução 
+        function palindrome(value)
+        {
+          let original = value.split("");
+          let copyOriginal = value.split("");
+          let reverseWord = copyOriginal.reverse();
+
+          // analisando index por index
+          for (let i = 0; i < value.length; i++) {
+            const wordOne = original[i].toLowerCase();
+            const wordTwo = reverseWord[i].toLowerCase();
+
+            if (wordOne == wordTwo) {
+              return true;
+            } else {
+              return false;
+            }
+          }
+        }
+
+        // 1 - Opção: selecionando div e inserindo resultado via código-fonte.
+        let message = document.querySelector("#message");
+        message.innerHTML = "[" + palindrome("reviver") + "]" ;
+
+        // 2 - Opção: capturando valor pelo usuário e mostrando em tela (caso o mesmo queira usar dessa forma).
+        let buttonValue = document.querySelector("#buttonValue");
+        
+        function printValue()
+        {
+          buttonValue.addEventListener('click', () => {
+            let inputValue = document.querySelector("#inputValue").value;
+            message.innerHTML = "[" + palindrome(inputValue) + "]" ; 
+          })
+        }
+
+        printValue();
+        
+    </script>
+  </body>
+</html>
