@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Árvore Binária Simples</title>
+</head>
+
+<body>
+  <div class="console container bg-dark p-5 mt-2 text-monospace" id="console">
+    <div class="comment text-white-50 text-justify" id="comment">
+      5 - Crie uma estrutura de árvore binária simples contendo os números de 1 a 5. Escreva uma função para percorrer a
+      árvore em ordem e imprimir os valores.
+    </div>
+    <br>
+    <div class="message text-warning" id="message">
+
+    </div>
+  </div>
+  <script>
+
+    // selecionando div e inserindo resultado dentro da mesma.
+    let message = document.querySelector("#message");
+
+    let root = null;
+    const values = [4, 2, 5, 1, 3];
+
+    // criando árvore
+    function Node(value) {
+      this.value = value;
+      this.left = null;
+      this.right = null;
+    }
+
+    // inserindo valores na árvore
+    function insertTree(root, value) {
+      if (root === null) {
+        return new Node(value);
+      }
+
+      if (value < root.value) {
+        root.left = insertTree(root.left, value);
+      } else if (value > root.value) {
+        root.right = insertTree(root.right, value);
+      }
+
+      return root;
+    }
+
+    // ordenando 
+    function order(root) {
+      if (root !== null) {
+        order(root.left);
+        message.innerHTML += "<p> [" + root.value + "] </p>";
+        order(root.right);
+      }
+    }
+
+    // forEach para percorrer o array da árvore
+    values.forEach(value => {
+      root = insertTree(root, value);
+    });
+
+    order(root);
+
+  </script>
+</body>
+
+</html>

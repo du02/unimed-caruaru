@@ -12,3 +12,6 @@ Implemente uma função de busca em uma lista ordenada de números inteiros. A f
 
 ### 4 - Verificação de Palíndromos
 Escreva uma função que determine se uma palavra é um palíndromo. A função deve retornar True se for um palíndromo e False caso contrário.
+
+### 5 - Árvore Binária Simples
+Crie uma estrutura de árvore binária simples contendo os números de 1 a 5. Escreva uma função para percorrer a árvore em ordem e imprimir os valores.
