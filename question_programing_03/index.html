@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Busca em Lista Ordenada</title>
+  </head>
+  <body class="p-2">
+    <div class="container mt-2 p-0 d-flex">
+      <input id="inputValue" class="form-control form-control-lg text-monospace mr-1" type="number" placeholder="Digite um valor númerico." value="0">
+      <button id="buttonValue" type="submit" class="btn btn-warning btn-lg mb-2 text-white">Consultar</button>
+    </div>
+    <div class="console container bg-dark p-5 mt-2 text-monospace" id="console">
+        <div class="comment text-white-50 text-justify" id="comment">
+            3 - Implemente uma função de busca em uma lista ordenada de números inteiros. A função deve receber um número como parâmetro e retornar a posição do número na lista, ou indicar se não está presente.
+        </div>
+        <br>
+        <div class="message text-warning" id="message">
+            
+        </div>
+    </div>
+    <script>
+
+        // resolução
+        function searchList(value)
+        {
+            let numbers = [1,2,3,4,5,6,7,8,9,10];
+            
+            for (let i = 0; i < numbers.length; i++)
+            {
+              if(numbers[i] == value)
+              {
+                return "Posição na lista: " + i;
+              }
+            }
+      
+            return "Não está presente";
+        }
+
+        // 1 - Opção: selecionando div e inserindo resultado via código-fonte.
+        let message = document.querySelector("#message");
+        message.innerHTML = "[" + searchList(0) + "]" ;
+
+        // 2 - Opção: capturando valor pelo usuário e mostrando em tela (caso o mesmo queira usar dessa forma).
+        let buttonValue = document.querySelector("#buttonValue");
+
+        function printValue()
+        {
+          buttonValue.addEventListener('click', () => {
+            let inputValue = document.querySelector("#inputValue").value;
+            message.innerHTML = "[" + searchList(inputValue) + "]" ;
+          })
+        }
+
+        printValue();
+
+    </script>
+  </body>
+</html>
