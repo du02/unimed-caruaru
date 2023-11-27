@@ -15,3 +15,6 @@ Escreva uma função que determine se uma palavra é um palíndromo. A função 
 
 ### 5 - Árvore Binária Simples
 Crie uma estrutura de árvore binária simples contendo os números de 1 a 5. Escreva uma função para percorrer a árvore em ordem e imprimir os valores.
+
+### 6 - Junção e Ordenação
+Escreva uma consulta SQL que retorne o nome do cliente, o número do pedido e a data do pedido, ordenados pela data do pedido em ordem decrescente.
