@@ -18,3 +18,7 @@ Crie uma estrutura de árvore binária simples contendo os números de 1 a 5. Es
 
 ### 6 - Junção e Ordenação
 Escreva uma consulta SQL que retorne o nome do cliente, o número do pedido e a data do pedido, ordenados pela data do pedido em ordem decrescente.
+
+### 7 - Agrupamento e Contagem
+Utilizando a tabela "Produtos" e "Categorias", escreva uma consulta SQL que retorne o número de produtos em cada categoria, mostrando também o nome da categoria.
+
