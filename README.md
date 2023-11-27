@@ -22,3 +22,6 @@ Escreva uma consulta SQL que retorne o nome do cliente, o número do pedido e a 
 ### 7 - Agrupamento e Contagem
 Utilizando a tabela "Produtos" e "Categorias", escreva uma consulta SQL que retorne o número de produtos em cada categoria, mostrando também o nome da categoria.
 
+### 8 - Projeção e Filtros
+Considere a tabela "Funcionarios". Escreva uma consulta SQL que retorne o nome, cargo e salário de todos os funcionários que têm um salário superior a 50000.
+
