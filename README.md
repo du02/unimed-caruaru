@@ -27,3 +27,7 @@ Considere a tabela "Funcionarios". Escreva uma consulta SQL que retorne o nome, 
 
 ### 9 - Subconsultas e Relacionamentos
 Utilizando as tabelas "Alunos" e "Notas", escreva uma consulta SQL que retorne o nome do aluno e a média de suas notas.
+
+### 10 - Join Múltiplo e Funções Agregadas
+Considere as tabelas "Clientes", "Pedidos" e "Produtos". Escreva uma consulta SQL que retorne o nome do cliente, o número do pedido e a quantidade total de itens em cada pedido. Utilize junções múltiplas e funções agregadas.
+
