@@ -1,4 +1,4 @@
-# unimed-caruaru
+# Unimed Caruaru
 Processo Seletivo - NTI
 
 ### 1 - Sequência de Fibonacci
@@ -30,4 +30,3 @@ Utilizando as tabelas "Alunos" e "Notas", escreva uma consulta SQL que retorne o
 
 ### 10 - Join Múltiplo e Funções Agregadas
 Considere as tabelas "Clientes", "Pedidos" e "Produtos". Escreva uma consulta SQL que retorne o nome do cliente, o número do pedido e a quantidade total de itens em cada pedido. Utilize junções múltiplas e funções agregadas.
-
