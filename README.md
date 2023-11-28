@@ -25,3 +25,5 @@ Utilizando a tabela "Produtos" e "Categorias", escreva uma consulta SQL que reto
 ### 8 - Projeção e Filtros
 Considere a tabela "Funcionarios". Escreva uma consulta SQL que retorne o nome, cargo e salário de todos os funcionários que têm um salário superior a 50000.
 
+### 9 - Subconsultas e Relacionamentos
+Utilizando as tabelas "Alunos" e "Notas", escreva uma consulta SQL que retorne o nome do aluno e a média de suas notas.
